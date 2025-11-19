@@ -161,14 +161,62 @@ p {
     line-height: 1.2;
 }
 
-/* Navigation Icons - Simple geometric pictograms */
-.nav-icon {
-    font-size: 16px;
+/* Navigation Pictogram Squares - For pictogram images */
+.nav-pictogram-square {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 8px;
-    font-weight: normal;
-    display: inline-block;
+    flex-shrink: 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.nav-pictogram-img {
     width: 16px;
+    height: 16px;
+    object-fit: contain;
+    /* Temporarily remove filter to test visibility */
+    /* filter: contrast(1) brightness(0); Makes images black */
+}
+
+/* Hover states - invert colors */
+.nav-link:hover .nav-pictogram-square,
+.nav-link:focus .nav-pictogram-square {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.nav-link:hover .nav-pictogram-img,
+.nav-link:focus .nav-pictogram-img {
+    filter: contrast(1) brightness(1); /* Makes images white on hover */
+}
+
+/* Active state pictogram styling */
+.nav-link[aria-current="page"] .nav-pictogram-square {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.nav-link[aria-current="page"] .nav-pictogram-img {
+    filter: contrast(1) brightness(1); /* White on active */
+}
+
+/* Fallback styling when images aren't loaded */
+.nav-pictogram-img[src=""]::before,
+.nav-pictogram-img:not([src])::before {
+    content: attr(data-pictogram);
+    font-size: 10px;
+    font-weight: 700;
+    color: currentColor;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     text-align: center;
+    line-height: 1;
 }
 
 .nav-text {
@@ -178,6 +226,22 @@ p {
 /* Mobile navigation toggle - hidden on desktop */
 .nav-toggle {
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle-line {
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 /* Color coding system - Each section gets distinct color */
@@ -455,7 +519,7 @@ p {
 .section-subtitle {
     font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Frutiger priority */
     font-size: 24px; /* 24px - directional info size (60mm equivalent) */
-    color: #666666; /* Subtle contrast for hierarchy */
+    color: #333333; /* Darker grey for better contrast */
     margin: 0;
     font-weight: 700; /* Bold only - Vignelli principle */
     letter-spacing: 0.05em; /* Open spacing for legibility */
@@ -724,7 +788,7 @@ p {
     font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #666666;
+    color: #333333;
     margin-left: 16px;
 }
 
@@ -786,7 +850,7 @@ p {
 
 .system-name {
     font-weight: 400;
-    color: #666666;
+    color: #333333;
 }
 
 /* Principles Bar - Transit Badge Style */
@@ -1277,8 +1341,8 @@ p {
 
 .designer-achievements li {
     font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 19px; /* Increased from 18px to 19px */
+    font-weight: 500; /* Confirmed at 500 */
     line-height: 1.3;
     color: #333333;
     margin: 0 0 8px 0;
@@ -1369,8 +1433,8 @@ p {
 }
 
 .carousel-image {
-    max-width: 95%;
-    max-height: 80%;
+    max-width: 100%; /* Increased from 95% */
+    max-height: 85%; /* Increased from 80% */
     object-fit: contain;
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -1395,7 +1459,7 @@ p {
     font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #666666;
+    color: #333333;
     margin: 0;
     line-height: 1.4;
 }
