@@ -1,0 +1,908 @@
+/* ===== VIGNELLI TRANSIT MODERNISM - MOBILE STYLES ===== */
+/* Mobile-first responsive design maintaining 8px grid system */
+
+/* ===== TOUCH & ACCESSIBILITY IMPROVEMENTS ===== */
+/* Better touch targets for mobile devices */
+@media (max-width: 768px) {
+    /* Ensure touch targets are at least 44px for accessibility */
+    .nav-link, .nav-toggle, .route-bar-segment {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Improve tap highlight color */
+    .nav-link, .nav-toggle, .route-bar-segment, .principle-item {
+        -webkit-tap-highlight-color: rgba(245, 127, 41, 0.3);
+    }
+    
+    /* Prevent text selection on interactive elements */
+    .nav-toggle, .route-bar-segment {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    /* Better touch feedback */
+    .nav-link:active, .principle-item:active {
+        background-color: rgba(245, 127, 41, 0.1);
+        transform: scale(0.98);
+        transition: all 0.1s ease;
+    }
+}
+
+/* ===== GLOBAL CONTAINER SYSTEM - MOBILE OVERRIDES ===== */
+/* Consistent container for all pages - responsive adjustments */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Large tablet/small desktop breakpoint */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 16px;
+        height: 60px; /* Slightly smaller for better proportions */
+    }
+    
+    .site-identity {
+        min-width: 180px; /* Reduce min width */
+    }
+    
+    .site-title {
+        font-size: 20px; /* Slightly smaller */
+    }
+    
+    .site-subtitle {
+        font-size: 10px;
+    }
+    
+    .nav-link {
+        padding: 8px 16px; /* Reduce padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .nav-pictogram-square {
+        width: 18px;
+        height: 18px;
+        margin-right: 12px;
+    }
+    
+    .nav-pictogram-img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .hero {
+        --hero-padding-vertical: 64px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        max-width: 700px;
+        padding: 0 32px;
+    }
+    
+    .hero-title-main {
+        font-size: clamp(80px, 8vw, 100px);
+    }
+    
+    .hero-title-sub {
+        font-size: clamp(60px, 6vw, 72px);
+    }
+    
+    .hero-sub {
+        font-size: 24px; /* Increased from 12px to 24px */
+        margin: 24px 0 0 20px; /* Better spacing and alignment */
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section-container {
+        padding: 0 20px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    /* ===== VIGNELLI TRANSIT OVERVIEW - TABLET ===== */
+    .transit-info-board {
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px;
+    }
+
+    .route-name {
+        font-size: 28px;
+    }
+
+    .destination-info {
+        font-size: 24x;
+    }
+
+    .station-name {
+        font-size: 24px;
+        min-width: 100px;
+    }
+
+    .principles-bar {
+        gap: 12px;
+        margin: 32px 0;
+    }
+
+    .summary-panel {
+        padding: 20px;
+        margin-top: 32px;
+    }
+
+    /* ===== PRINCIPLES GRID - TABLET ===== */
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 700px;
+    }
+
+    .principle-item {
+        min-height: 250px;
+        padding: 20px;
+    }
+}
+
+/* Medium tablet breakpoint */
+@media (max-width: 900px) {
+    .nav-container {
+        height: 60px;
+    }
+    
+    .site-identity {
+        min-width: 180px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+    }
+    
+    .site-subtitle {
+        font-size: 10px;
+    }
+    
+    .nav-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .nav-icon {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+    
+    /* Keep nav text visible for mobile dropdown menu */
+    .nav-text {
+        display: inline; /* Show text in mobile menu */
+        font-size: 14px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 64px;
+    }
+    
+    .nav-container {
+        padding: 0 12px; /* Tighter padding */
+        height: 56px; /* Smaller height for mobile */
+    }
+    
+    .site-identity {
+        min-width: 150px; /* Further reduce */
+    }
+    
+    .site-title {
+        font-size: 18px; /* Smaller for mobile */
+    }
+    
+    .site-subtitle {
+        font-size: 9px;
+    }
+    
+    .nav-toggle {
+        display: flex !important; /* Force display with higher specificity */
+        position: relative;
+        z-index: 1001; /* Ensure it's above other elements */
+    }
+    
+    .nav-menu {
+        display: none; /* Hide desktop menu on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        flex-direction: column;
+        padding: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-menu.nav-menu--open {
+        display: flex; /* Show when opened */
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+    
+    .nav-item:not(:last-child) .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link {
+        padding: 20px 24px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-pictogram-square {
+        width: 18px;
+        height: 18px;
+        margin-right: 12px;
+    }
+    
+    .nav-pictogram-img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .nav-text {
+        font-size: 16px;
+    }
+    
+    .hero {
+        --hero-padding-vertical: 48px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    
+    .hero-title {
+        margin-bottom: 24px;
+    }
+    
+    .hero-title-main {
+        font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: clamp(72px, 12vw, 96px);
+        font-weight: 700;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin: 0 0 4px 0;
+    }
+    
+    .hero-title-sub {
+        font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: clamp(48px, 10vw, 72px);
+        font-weight: 700;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin: 0;
+    }
+    
+    .hero-sub {
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+        margin: 20px 0 0 0;
+        
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .section-container {
+        padding: 0 16px;
+    }
+    
+    .section-header {
+        margin-bottom: 24px;
+    }
+    
+    .section-line {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        margin-bottom: 12px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .section-content:empty::before {
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+
+    /* ===== VIGNELLI TRANSIT OVERVIEW - MOBILE ===== */
+    .transit-info-board {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .route-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .route-name {
+        font-size: 24px;
+    }
+
+    .route-status {
+        align-self: flex-start;
+    }
+
+    .destination-info {
+        font-size: 16px;
+    }
+
+    .station-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .station-dot {
+        margin-bottom: 8px;
+    }
+
+    .station-name {
+        font-size: 14px;
+        margin-left: 44px;
+        margin-top: -32px;
+    }
+
+    .station-detail {
+        font-size: 14px;
+        margin-left: 44px;
+        margin-top: -8px;
+    }
+
+    .map-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .principles-bar {
+        flex-direction: column;
+        gap: 8px;
+        margin: 24px 0;
+    }
+
+    .summary-panel {
+        padding: 16px;
+        margin-top: 24px;
+    }
+
+    .summary-text {
+        font-size: 16px;
+    }
+
+    /* ===== PRINCIPLES SHOWCASE - MOBILE ===== */
+    .principles-showcase {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .principle-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .principle-icon {
+        margin: 0 auto 16px auto;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .principle-title {
+        font-size: 18px;
+    }
+    
+    .principle-description {
+        font-size: 14px;
+    }
+
+    /* ===== IMAGE CAROUSEL - MOBILE ===== */
+    .image-carousel {
+        border: 1px solid #E22726;
+    }
+
+    .carousel-slide {
+        padding: 16px;
+    }
+
+    .carousel-image {
+        max-width: 100%; /* Increased from 95% */
+        max-height: 70%; /* Increased from 60% */
+    }
+
+    .slide-title {
+        font-size: 20px;
+    }
+
+    .slide-description {
+        font-size: 14px;
+    }
+
+    .carousel-controls {
+        padding: 12px 16px;
+        display: flex !important; /* Ensure controls are visible */
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.95); /* Add background for visibility */
+        border-top: 1px solid #E22726;
+    }
+
+    .carousel-btn {
+        width: 44px; /* Larger touch target */
+        height: 44px;
+        font-size: 24px; /* Larger font for better visibility */
+        border: 2px solid #E22726; /* Use brand color */
+        color: #E22726;
+        background-color: #ffffff;
+        display: flex !important; /* Ensure buttons are visible */
+    }
+    
+    .carousel-btn:hover,
+    .carousel-btn:focus {
+        background-color: #E22726;
+        color: #ffffff;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 8px; /* Even tighter padding */
+        height: 52px; /* Smaller height for small phones */
+    }
+    
+    .site-identity {
+        min-width: 120px; /* Smaller for phones */
+    }
+    
+    .site-title {
+        font-size: 16px; /* Smaller for phones */
+    }
+    
+    .site-subtitle {
+        font-size: 8px;
+    }
+    
+    .hero {
+        --hero-padding-vertical: 40px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        gap: 24px;
+    }
+    
+    .hero-sub {
+        font-size: 18px; /* Appropriate size for small phones */
+        margin: 16px 0 0 0; /* Better margin for smaller screens */
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .route-lines {
+        gap: 12px;
+    }
+    
+    .route-line {
+        padding: 12px 16px;
+        border-left-width: 6px;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 32px;
+    }
+    
+    .section-line {
+        width: 50px;
+        margin-bottom: 16px;
+    }
+    
+    .principle-grid,
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .intro-text {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    
+    .conclusion-text {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+    
+    .principle-title {
+        font-size: 18px;
+    }
+    
+    .principle-list li {
+        font-size: calc(18px * 0.9);
+    }
+    
+    /* Timeline mobile styles */
+    .timeline {
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 32px;
+        padding-left: 48px;
+    }
+    
+    .timeline-year {
+        position: relative;
+        left: auto;
+        width: auto;
+        text-align: left;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .timeline-item::before {
+        left: 16px;
+        width: 8px;
+        height: 8px;
+        top: 6px;
+    }
+    
+    .timeline-content {
+        padding-left: 0;
+    }
+    
+    .timeline-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .timeline-details li {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    /* Designers grid mobile styles */
+    .designers-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 32px 0;
+    }
+    
+    .designer-card {
+        padding: 24px 20px;
+        border-left-width: 4px;
+    }
+    
+    .designer-name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .designer-achievements li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-left: 18px;
+    }
+    
+    .designer-achievements li::before {
+        font-size: 14px;
+    }
+    
+    /* Overview mobile styles */
+    .overview-split {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .overview-text-column,
+    .overview-image-column {
+        flex: none;
+    }
+    
+    .overview-text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+    
+    .overview-image {
+        margin-top: 0;
+    }
+    
+    .overview-img {
+        border-width: 1px;
+    }
+    
+    /* Transit Info Board - Mobile Optimization */
+    .transit-info-board {
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 auto 32px auto;
+        padding: 24px 16px;
+        width: calc(100% - 32px);
+        max-width: none;
+    }
+    
+    .route-info-panel {
+        flex: none;
+    }
+    
+    .route-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+    
+    .route-indicator {
+        width: 20px;
+        height: 20px;
+        margin-right: 0;
+    }
+    
+    .route-name {
+        font-size: 24px;
+        margin-right: 0;
+    }
+    
+    .route-status {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+    
+    .destination-info {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
+    .station-list {
+        margin: 20px 0;
+    }
+    
+    .station-item {
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .station-dot {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+    }
+    
+    .station-name {
+        font-size: 16px;
+        min-width: auto;
+    }
+    
+    .station-detail {
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 4px;
+        width: 100%;
+    }
+    
+    .system-map-panel {
+        flex: none;
+    }
+    
+    .map-header {
+        margin-bottom: 12px;
+    }
+    
+    .map-title {
+        font-size: 16px;
+    }
+    
+    .map-year {
+        font-size: 12px;
+    }
+    
+    .system-map {
+        border-width: 1px;
+    }
+    
+    /* Hero Section Mobile Improvements */
+    .hero-title {
+        margin: 32px 16px 40px 16px;
+    }
+    
+    .hero-sub {
+        margin: 24px 0 0 16px;
+        font-size: 24px;
+    }
+    
+    .route-bar-segment::after {
+        bottom: calc(24px + 8px);
+        font-size: 10px;
+        padding: 6px 16px;
+        white-space: normal;
+        width: 200px;
+        text-align: center;
+    }
+    
+    /* Principles Section Mobile */
+    .principle-item {
+        padding: 20px 16px;
+        border-width: 1px;
+        border-radius: 6px;
+    }
+    
+    .principle-title {
+        font-size: 16px;
+        margin: 0 0 12px 0;
+    }
+    
+    .principle-details li {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        padding-left: 16px;
+    }
+    
+    .principle-details li:before {
+        font-size: 10px;
+    }
+    
+    /* ===== CAROUSEL CONTROLS - SMALL MOBILE ===== */
+    .carousel-controls {
+        padding: 8px 12px;
+        position: relative;
+        z-index: 10; /* Ensure visibility */
+        background-color: rgba(255, 255, 255, 0.98);
+        border-top: 2px solid #E22726;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border: 2px solid #E22726;
+        color: #E22726;
+        background-color: #ffffff;
+        min-height: 44px; /* Touch-friendly */
+        min-width: 44px;
+    }
+    
+    .carousel-btn:active,
+    .carousel-btn:hover {
+        background-color: #E22726;
+        color: #ffffff;
+        transform: scale(0.95);
+    }
+}
+
+/* iPhone SE and very small devices */
+@media (max-width: 375px) {
+    .hero-title-main {
+        font-size: clamp(48px, 15vw, 64px);
+    }
+    
+    .hero-title-sub {
+        font-size: clamp(36px, 12vw, 48px);
+    }
+    
+    .hero-sub {
+        font-size: 18px;
+        padding: 0 8px;
+    }
+    
+    .hero-title {
+        margin: 24px 8px 32px 8px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+    }
+    
+    .transit-info-board {
+        padding: 16px 12px;
+        width: calc(100% - 16px);
+    }
+    
+    .nav-link {
+        padding: 16px 20px;
+    }
+    
+    .nav-text {
+        font-size: 14px;
+    }
+    
+    .principle-item {
+        padding: 16px 12px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        --hero-padding-vertical: 32px;
+    }
+    
+    .hero-title-main {
+        font-size: clamp(48px, 8vw, 72px);
+    }
+    
+    .hero-title-sub {
+        font-size: clamp(36px, 6vw, 56px);
+    }
+    
+    .hero-sub {
+        font-size: 20px;
+    }
+    
+    .nav-container {
+        height: 56px;
+    }
+    
+    .main-content {
+        margin-top: 56px;
+    }
+}
