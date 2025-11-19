@@ -1,0 +1,592 @@
+/* ===== VIGNELLI TRANSIT MODERNISM - MOBILE STYLES ===== */
+/* Mobile-first responsive design maintaining 8px grid system */
+
+/* ===== GLOBAL CONTAINER SYSTEM - MOBILE OVERRIDES ===== */
+/* Consistent container for all pages - responsive adjustments */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Large tablet/small desktop breakpoint */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0 16px;
+        height: 64px;
+    }
+    
+    .site-identity {
+        min-width: 200px;
+    }
+    
+    .site-title {
+        font-size: 22px;
+    }
+    
+    .site-subtitle {
+        font-size: 11px;
+    }
+    
+    .nav-link {
+        padding: 10px 18px;
+        font-size: 18px;
+    }
+
+    .nav-icon {
+        font-size: 16px;
+        margin-right: 6px;
+    }
+    
+    .hero {
+        --hero-padding-vertical: 64px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        max-width: 700px;
+        padding: 0 32px;
+    }
+    
+    .hero-title-main {
+        font-size: clamp(80px, 8vw, 100px);
+    }
+    
+    .hero-title-sub {
+        font-size: clamp(60px, 6vw, 72px);
+    }
+    
+    .hero-sub {
+        font-size: 12px;
+        margin: 8px 0 0 0;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section-container {
+        padding: 0 20px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    /* ===== VIGNELLI TRANSIT OVERVIEW - TABLET ===== */
+    .transit-info-board {
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px;
+    }
+
+    .route-name {
+        font-size: 28px;
+    }
+
+    .destination-info {
+        font-size: 24x;
+    }
+
+    .station-name {
+        font-size: 24px;
+        min-width: 100px;
+    }
+
+    .principles-bar {
+        gap: 12px;
+        margin: 32px 0;
+    }
+
+    .summary-panel {
+        padding: 20px;
+        margin-top: 32px;
+    }
+
+    /* ===== PRINCIPLES GRID - TABLET ===== */
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 700px;
+    }
+
+    .principle-item {
+        min-height: 250px;
+        padding: 20px;
+    }
+}
+
+/* Medium tablet breakpoint */
+@media (max-width: 900px) {
+    .nav-container {
+        height: 60px;
+    }
+    
+    .site-identity {
+        min-width: 180px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+    }
+    
+    .site-subtitle {
+        font-size: 10px;
+    }
+    
+    .nav-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .nav-icon {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+    
+    .nav-text {
+        display: none;
+    }
+    
+    .nav-icon {
+        margin-right: 0;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 64px;
+    }
+    
+    .nav-container {
+        padding: 0 16px;
+        height: 64px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+    }
+    
+    .site-subtitle {
+        font-size: 10px;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        flex-direction: column;
+        padding: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-menu.nav-menu--open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+    
+    .nav-item:not(:last-child) .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link {
+        padding: 20px 24px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-icon {
+        margin-right: 16px;
+        font-size: 14px;
+    }
+    
+    .nav-text {
+        font-size: 16px;
+    }
+    
+    .hero {
+        --hero-padding-vertical: 48px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    
+    .hero-title {
+        margin-bottom: 24px;
+    }
+    
+    .hero-title-main {
+        font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: clamp(72px, 12vw, 96px);
+        font-weight: 700;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin: 0 0 4px 0;
+    }
+    
+    .hero-title-sub {
+        font-family: 'Frutiger', 'Univers', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: clamp(48px, 10vw, 72px);
+        font-weight: 700;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin: 0;
+    }
+    
+    .hero-sub {
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+        margin: 20px 0 0 0;
+        
+    }
+    
+    .content-section {
+        padding: 40px 0;
+    }
+    
+    .section-container {
+        padding: 0 16px;
+    }
+    
+    .section-header {
+        margin-bottom: 24px;
+    }
+    
+    .section-line {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        margin-bottom: 12px;
+    }
+    
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .section-content:empty::before {
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+
+    /* ===== VIGNELLI TRANSIT OVERVIEW - MOBILE ===== */
+    .transit-info-board {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .route-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .route-name {
+        font-size: 24px;
+    }
+
+    .route-status {
+        align-self: flex-start;
+    }
+
+    .destination-info {
+        font-size: 16px;
+    }
+
+    .station-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .station-dot {
+        margin-bottom: 8px;
+    }
+
+    .station-name {
+        font-size: 14px;
+        margin-left: 44px;
+        margin-top: -32px;
+    }
+
+    .station-detail {
+        font-size: 14px;
+        margin-left: 44px;
+        margin-top: -8px;
+    }
+
+    .map-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .principles-bar {
+        flex-direction: column;
+        gap: 8px;
+        margin: 24px 0;
+    }
+
+    .summary-panel {
+        padding: 16px;
+        margin-top: 24px;
+    }
+
+    .summary-text {
+        font-size: 16px;
+    }
+
+    /* ===== PRINCIPLES SHOWCASE - MOBILE ===== */
+    .principles-showcase {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .principle-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .principle-icon {
+        margin: 0 auto 16px auto;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .principle-title {
+        font-size: 18px;
+    }
+    
+    .principle-description {
+        font-size: 14px;
+    }
+
+    /* ===== IMAGE CAROUSEL - MOBILE ===== */
+    .image-carousel {
+        border: 1px solid #E22726;
+    }
+
+    .carousel-slide {
+        padding: 16px;
+    }
+
+    .carousel-image {
+        max-width: 95%;
+        max-height: 60%;
+    }
+
+    .slide-title {
+        font-size: 20px;
+    }
+
+    .slide-description {
+        font-size: 14px;
+    }
+
+    .carousel-controls {
+        padding: 12px 16px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+    .hero {
+        --hero-padding-vertical: 40px;
+        padding: var(--hero-padding-vertical) 0;
+    }
+    
+    .hero-container {
+        gap: 24px;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .route-lines {
+        gap: 12px;
+    }
+    
+    .route-line {
+        padding: 12px 16px;
+        border-left-width: 6px;
+    }
+    
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 32px;
+    }
+    
+    .section-line {
+        width: 50px;
+        margin-bottom: 16px;
+    }
+    
+    .principle-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .intro-text {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    
+    .conclusion-text {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+    
+    .principle-title {
+        font-size: 18px;
+    }
+    
+    .principle-list li {
+        font-size: calc(18px * 0.9);
+    }
+    
+    /* Timeline mobile styles */
+    .timeline {
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 32px;
+        padding-left: 48px;
+    }
+    
+    .timeline-year {
+        position: relative;
+        left: auto;
+        width: auto;
+        text-align: left;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    
+    .timeline-item::before {
+        left: 16px;
+        width: 8px;
+        height: 8px;
+        top: 6px;
+    }
+    
+    .timeline-content {
+        padding-left: 0;
+    }
+    
+    .timeline-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .timeline-details li {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    /* Designers grid mobile styles */
+    .designers-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 32px 0;
+    }
+    
+    .designer-card {
+        padding: 24px 20px;
+        border-left-width: 4px;
+    }
+    
+    .designer-name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .designer-achievements li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-left: 18px;
+    }
+    
+    .designer-achievements li::before {
+        font-size: 14px;
+    }
+    
+    /* Overview mobile styles */
+    .overview-split {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .overview-text-column,
+    .overview-image-column {
+        flex: none;
+    }
+    
+    .overview-text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+    
+    .overview-image {
+        margin-top: 0;
+    }
+    
+    .overview-img {
+        border-width: 1px;
+    }
+}

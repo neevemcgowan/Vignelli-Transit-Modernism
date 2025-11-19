@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignelli Transit Modernism</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <!-- Site Identity -->
+            <div class="site-identity">
+                <div class="logo-component">
+                    <div class="logo-circle">V</div>
+                    <div class="logo-circle">T</div>
+                    <div class="logo-circle">M</div>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item nav-item--primary">
+                    <a href="#home" class="nav-link nav-link--home" aria-current="page">
+                        <span class="nav-icon">■</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#overview" class="nav-link nav-link--overview">
+                        <span class="nav-icon">◯</span>
+                        <span class="nav-text">Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#evolution" class="nav-link nav-link--evolution">
+                        <span class="nav-icon">△</span>
+                        <span class="nav-text">Evolution</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#principles" class="nav-link nav-link--principles">
+                        <span class="nav-icon">□</span>
+                        <span class="nav-text">Principles</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#influence" class="nav-link nav-link--influence">
+                        <span class="nav-icon">◇</span>
+                        <span class="nav-text">Influence</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#visuals" class="nav-link nav-link--visuals">
+                        <span class="nav-icon">●</span>
+                        <span class="nav-text">Gallery</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Navigation Toggle for Mobile -->
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Vignelli Transit Modernism</span>
+                </h1>
+                <p class="hero-sub">Wayfinding, Civic Systems, and Public Information Design</p>
+            </div>
+            
+            <!-- Route Bar -->
+            <div class="route-bar">
+                <div class="route-bar-segment route-bar-segment--red" data-tooltip="Massimo Vignelli • NYC Subway Map (1972)"></div>
+                <div class="route-bar-segment route-bar-segment--blue" data-tooltip="Otl Aicher • Munich Olympics (1972)"></div>
+                <div class="route-bar-segment route-bar-segment--green" data-tooltip="Jock Kinneir • UK Road Signage (1960s)"></div>
+                <div class="route-bar-segment route-bar-segment--orange" data-tooltip="Lance Wyman • Mexico City Metro (1968)"></div>
+                <div class="route-bar-segment route-bar-segment--purple" data-tooltip="Harry Beck • London Underground (1931)"></div>
+            </div>
+        </section>
+        
+        <!-- Overview Section -->
+        <section class="content-section" id="overview">
+            <div class="section-container">
+                <header class="section-header">
+                    <div class="section-line section-line--blue"></div>
+                    <h2 class="section-title">Overview</h2>
+                    <p class="section-subtitle">Systematic Design for Civic Navigation</p>
+                </header>
+                <div class="section-content">
+                    <div class="content-text">
+                        <!-- Transit Information Board Layout -->
+                        <div class="transit-info-board">
+                            <!-- Main Route Information -->
+                            <div class="route-info-panel">
+                                <div class="route-header">
+                                    <div class="route-indicator"></div>
+                                    <h3 class="route-name">Transit Modernism</h3>
+                                </div>
+                                
+                                <div class="route-description">
+                                    <p class="destination-info">Grounded in Swiss Modernist principles and shaped by the work of Italian architect Massimo Vignelli, this style focuses on clarity, structure, and consistency.</p>
+                                </div>
+                                
+                                <!-- Station List -->
+                                <div class="station-list">
+                                    <div class="station-item">
+                                        <div class="station-dot"></div>
+                                        <span class="station-name">Wayfinding Systems</span>
+                                    </div>
+                                    <div class="station-item">
+                                        <div class="station-dot"></div>
+                                        <span class="station-name">Information Design</span>
+                                    </div>
+                                    <div class="station-item">
+                                        <div class="station-dot"></div>
+                                        <span class="station-name">Navigation Systems</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Visual System Panel -->
+                            <div class="system-map-panel">
+                                <div class="map-header">
+                                    <h4 class="map-title">System Map</h4>
+                                    <span class="map-year">1972</span>
+                                </div>
+                                <div class="map-container">
+                                    <img src="../research/images/nycsubway2.webp" alt="NYC Subway Map by Massimo Vignelli" class="system-map">
+                                </div>
+                                <div class="map-caption">
+                                    <span class="designer-credit">Massimo Vignelli</span>
+                                    <span class="system-name">NYC Subway</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Evolution Section -->
+        <section class="content-section content-section--alt" id="evolution">
+            <div class="section-container">
+                <header class="section-header">
+                    <div class="section-line section-line--green"></div>
+                    <h2 class="section-title">Evolution</h2>
+                    <p class="section-subtitle">From Beck to Vignelli: Evolution of Transit Design</p>
+                </header>
+                <div class="section-content">
+                    <div class="content-text">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1931</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Harry Beck — London Underground Map</h4>
+                                    <p class="timeline-summary">Introduces schematic mapping, prioritizing clarity over geography</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">1950s–60s</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Swiss Style Influence</h4>
+                                    <p class="timeline-summary">Grid systems, Helvetica typography, objective design principles</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">1964</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Vignelli, Unimark International</h4>
+                                    <p class="timeline-summary">Systematic approach to American transit communication</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">1972</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Massimo Vignelli — NYC Subway Map</h4>
+                                    <p class="timeline-summary">Full schematic redesign eliminates geographical concerns</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">1972</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Otl Aicher — Munich Olympics</h4>
+                                    <p class="timeline-summary">Pictograms become universal design standard</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">1970s–80s</div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-title">Global Expansion</h4>
+                                    <p class="timeline-summary">Washington Metro, Mexico City, European systems adopt modernist principles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Principles Section -->
+        <section class="content-section" id="principles">
+            <div class="section-container">
+                <header class="section-header">
+                    <div class="section-line section-line--orange"></div>
+                    <h2 class="section-title">Principles</h2>
+                    <p class="section-subtitle">Core Design Philosophy & Guidelines</p>
+                </header>
+                <div class="section-content">
+                    <div class="content-text">
+                        <div class="principles-grid">
+                            <div class="principle-item">
+                                <h3 class="principle-title">1. Clarity Above All</h3>
+                                <ul class="principle-details">
+                                    <li>Information must be readable at a distance</li>
+                                    <li>Accuracy is less important than usability</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h3 class="principle-title">2. Typography</h3>
+                                <ul class="principle-details">
+                                    <li>Humanist sans-serifs (Frutiger, Univers)</li>
+                                    <li>High contrast, large sizes, mixed case for shape recognition</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h3 class="principle-title">3. Color Systems</h3>
+                                <ul class="principle-details">
+                                    <li>Colors represent routes, zones, or meaning</li>
+                                    <li>Not used decoratively</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h3 class="principle-title">4. Pictograms</h3>
+                                <ul class="principle-details">
+                                    <li>Universal silhouettes inspired by Otl Aicher</li>
+                                    <li>Simple geometry, consistent weight, minimal detail</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h3 class="principle-title">5. Diagrammatic Maps</h3>
+                                <ul class="principle-details">
+                                    <li>Schematic, not literal, emphasizes connections and routes</li>
+                                    <li>45° and 90° line angles</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h3 class="principle-title">6. System Thinking</h3>
+                                <ul class="principle-details">
+                                    <li>Every part fits into a larger grid</li>
+                                    <li>Information hierarchy is strict and predictable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Influence Section -->
+        <section class="content-section content-section--alt" id="influence">
+            <div class="section-container">
+                <header class="section-header">
+                    <div class="section-line section-line--purple"></div>
+                    <h2 class="section-title">Influence</h2>
+                    <p class="section-subtitle">Global Impact on Modern Wayfinding</p>
+                </header>
+                <div class="section-content">
+                    <div class="content-text">
+                        <div class="designers-grid">
+                            <div class="designer-card">
+                                <h4 class="designer-name">Massimo Vignelli</h4>
+                                <ul class="designer-achievements">
+                                    <li>Lead designer of the NYC Subway Map (1972)</li>
+                                    <li>Known for strict grids, clarity, Helvetica, and systematic design</li>
+                                    <li>Applied modernism to civic environments</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="designer-card">
+                                <h4 class="designer-name">Otl Aicher</h4>
+                                <ul class="designer-achievements">
+                                    <li>Designed Munich Olympics pictograms (1972)</li>
+                                    <li>Created the modern blueprint for universal signage</li>
+                                    <li>Inspired worldwide transportation iconography</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="designer-card">
+                                <h4 class="designer-name">Lance Wyman</h4>
+                                <ul class="designer-achievements">
+                                    <li>Mexico City Metro identity system (1968)</li>
+                                    <li>Used symbols to communicate across languages</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="designer-card">
+                                <h4 class="designer-name">Jock Kinneir & Margaret Calvert</h4>
+                                <ul class="designer-achievements">
+                                    <li>Designed UK Road Sign System (1957-1967)</li>
+                                    <li>Established rules still used today: hierarchy, type size, clarity, contrast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="content-section" id="visuals">
+            <div class="section-container">
+                <header class="section-header">
+                    <div class="section-line section-line--red"></div>
+                    <h2 class="section-title">Gallery</h2>
+                    <p class="section-subtitle">Iconic Maps, Signage & Pictograms</p>
+                </header>
+                <div class="section-content">
+                    <div class="image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-track">
+                                <div class="carousel-slide">
+                                    <img src="../research/images/1972NYCsubwaymap.jpg" alt="1972 NYC Subway Map by Massimo Vignelli" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">1972 NYC Subway Map</h3>
+                                        <p class="slide-description">Massimo Vignelli's iconic schematic design</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/LondonUndergroundDiagram.gif" alt="London Underground Diagram by Harry Beck" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">London Underground</h3>
+                                        <p class="slide-description">Harry Beck's pioneering diagrammatic approach</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/MunichOlympicsPictograms.jpg" alt="Munich Olympics Pictograms by Otl Aicher" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Munich Olympics Pictograms</h3>
+                                        <p class="slide-description">Otl Aicher's universal design language</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/WashingtonMetro.png" alt="Washington Metro Wayfinding System" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Washington Metro</h3>
+                                        <p class="slide-description">Modernist principles in American transit</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/MexicoCityWayfindingSystem.jpg" alt="Mexico City Metro System by Lance Wyman" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Mexico City Metro</h3>
+                                        <p class="slide-description">Lance Wyman's symbol-based navigation</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/MilanMetro.jpg" alt="Milan Metro Signage System" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Milan Metro</h3>
+                                        <p class="slide-description">European modernist wayfinding design</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/NYCMetroWayfinding.png" alt="NYC Metro Wayfinding System" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">NYC Metro Wayfinding</h3>
+                                        <p class="slide-description">Contemporary NYC transit signage</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/NYCTA-GAmanual.jpg" alt="NYCTA Graphics Arts Manual" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">NYCTA Graphics Manual</h3>
+                                        <p class="slide-description">Official design standards documentation</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/SchipolAirport.jpg" alt="Schiphol Airport Wayfinding System" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Schiphol Airport</h3>
+                                        <p class="slide-description">International wayfinding excellence</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/UKMotorwaySignage.jpg" alt="UK Motorway Signage System" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">UK Motorway Signage</h3>
+                                        <p class="slide-description">Highway information design system</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/pictograms otl aicher.png" alt="Pictograms by Otl Aicher" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Aicher Pictograms</h3>
+                                        <p class="slide-description">Systematic visual communication</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../research/images/soccer pictogram.webp" alt="Soccer Pictogram Design" class="carousel-image">
+                                    <div class="slide-caption">
+                                        <h3 class="slide-title">Soccer Pictogram</h3>
+                                        <p class="slide-description">Sports iconography design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">‹</button>
+                            <button class="carousel-btn carousel-btn--next" aria-label="Next image">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content sections will be added here -->
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="navigation.js"></script>
+</body>
+</html>
